@@ -46,8 +46,26 @@ export default {
 
 <template>
     <section class="section-content">
-        <div class="container">
-            <h2> --> Content goes here &lt;-- </h2>
+        <div class="jumbotron">
+            <img src="../assets/img/jumbotron.jpg" alt="jumbo">
+        </div>
+
+        <div class="container section-series">
+            <h3>CURRENT SERIES</h3>
+
+            <div class="series">
+                <div class="square">
+                    <img src="../assets/img/footer-bg.jpg" alt="img">
+
+                    <div>ACTION COMICS</div>
+                
+                </div>
+
+            </div>
+
+            <div class="btndiv">
+                <button>LOAD MORE</button>
+            </div>
         </div>
 
     </section>
@@ -92,40 +110,105 @@ export default {
 .section-content {
     background-color: #1c1c1c;
     color: #ffffff;
+
+    .jumbotron {
+        max-height: 23rem;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .section-series {
+        min-height: 30rem;
+        background-color: pink;
+        
+
+        h3 {
+            background-color: #0282f9;
+            border: 1px solid #0282f9;
+            padding: .8rem;
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+            display: inline;
+
+            margin-top: -2rem;
+        }
+
+        .series {
+            min-height: 10rem;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            .square {
+                width: calc(100% / 6);
+                height: 250px;
+                margin: 1.5rem 0;
+                padding: 0 .5rem 0 .5rem;
+                
+                img {
+                    height: 80%;
+                    width: 100%;
+                    object-fit: cover;
+                    margin-bottom: .8rem;
+                }
+            }
+        }
+
+    
+        .btndiv {
+            display: flex;
+
+            button {
+                background-color: #0282f9;
+                border: 1px solid #0282f9;
+                padding: .5rem 2rem;
+                font-size: .9rem;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        
+
+    }
+   
 }
 
-h2 {
-    padding: 4rem;
+.square {
+    height: 100px;
+    background-color: turquoise;
+    border: 1px solid black;
 }
+
 
 .section-links {
     background-color: #0282f9;
-}
 
-ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 4rem 0; 
-}
+    ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 4rem 0; 
 
-ul li {
-    display: flex;
-    align-items: center;
-    max-width: calc(100% / 5);
-    cursor: pointer;
-}
+        li {
+            display: flex;
+            align-items: center;
+            max-width: calc(100% / 5);
+            cursor: pointer;
 
-li div {
-    color: #ffffff;
-    font-size: .9rem;
-}
+            img {
+                max-height: 3rem;
+            }
 
-ul img {
-    max-height: 3rem;
-}
-
-ul div {
-    margin-left: .8rem;
+            a {
+                color: #ffffff;
+                font-size: .9rem;
+                margin-left: .8rem;
+            }
+        }
+    }
 }
 
 // ul:last-child img {

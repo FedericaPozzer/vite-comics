@@ -168,6 +168,7 @@ button {
 .footer-icons {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .footer-icons img {

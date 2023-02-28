@@ -82,29 +82,29 @@ export default {
 <style lang="scss" scoped>
 /* debug */
 section {
-    /* margin-top: 20rem;
-         */
+    // margin-top: 20rem;
     background-color: #ffffff;
     padding: 2rem 0 2rem 0;
+
+    .header-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 5rem;
+
+        .img-container {
+            height: 5rem;
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                margin-left: 2rem;
+            }
+        }
+    }
 }
 
-.header-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    height: 5rem;
-}
-
-.img-container {
-    height: 5rem;
-}
-
-ul {
-    display: flex;
-}
-
-ul li {
-    margin-left: 2rem
-}
 </style>
