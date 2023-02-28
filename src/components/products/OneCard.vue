@@ -1,5 +1,12 @@
 <script></script>
 
-<template></template>
 
-<style lang="scss" scoped></style>
+<template>
+
+
+</template>
+
+
+<style lang="scss" scoped>
+   
+</style>

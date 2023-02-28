@@ -1,13 +1,28 @@
-<script></script>
+<script>
+
+    export default {
+        props : {
+            comics : Array,
+        }
+    }
+
+</script>
 
 <template>
 
     <div class="series">
-        <div class="square">
-            <img src="../../assets/img/footer-bg.jpg" alt="img">
+        <div class="square"  v-for="comic in comics" :key="comic.thumb">
 
-                <div>ACTION COMICS</div>
-                
+            <div class="card-container">
+
+                <!-- <img src="../../assets/img/footer-bg.jpg" alt="img"> -->
+                <img :src="comic.thumb" alt="">
+
+                <!-- <div>ACTION COMICS</div> -->
+                <div>{{ comic.series }}</div>
+
+            </div>
+            
         </div>
     </div>
 
@@ -28,20 +43,18 @@
         margin: 1.5rem 0;
         padding: 0 .5rem 0 .5rem;
                 
-        img {
-            height: 80%;
+        .card-container {
+            height: 100%;
             width: 100%;
-            object-fit: cover;
-            margin-bottom: .8rem;
+
+            img {
+                height: 80%;
+                width: 100%;
+                // object-fit: cover;
+                margin-bottom: .8rem;
+            }
         }
     }
-}
-
-// debug
-.square {
-    height: 100px;
-    background-color: turquoise;
-    border: 1px solid black;
 }
 
 
