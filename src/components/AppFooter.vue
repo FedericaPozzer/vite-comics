@@ -1,22 +1,22 @@
 <script>
 export default {
-    // data() {
-    //     return {
-            // footerIcons : [
-            //     "../assets/img/footer-facebook.png",
-            //     "../assets/img/footer-twitter.png",
-            //     "../assets/img/footer-youtube.png",
-            //     "../assets/img/footer-pinterest.png",
-            //     "../assets/img/footer-periscope.png",
-            // ]
-    //     }
-    // },
+    data() {
+        return {
+            footerIcons : [
+                "footer-facebook.png",
+                "footer-twitter.png",
+                "footer-youtube.png",
+                "footer-pinterest.png",
+                "footer-periscope.png",
+            ]
+        }
+    },
 
-    // methods : {
-    //     getImagePath : function(img) {
-    //         return new URL(`${img}`, import.meta.url).href;
-    //     }
-    // }
+    methods : {
+        getIconPath : function(img) {
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
+        }
+    }
 }
 </script>
 
@@ -90,14 +90,14 @@ export default {
 
             <div class="footer-icons">
                 <h2>FOLLOW US</h2>
-                <!-- <div v-for="(icon, i) in footerIcons" v-bind:key="i">
-                        <img :src="icon" alt="icon">
-                    </div> -->
-                <a href="#"><img src="../assets/img/footer-facebook.png" alt="icon"></a>
+                <div v-for="(icon, i) in footerIcons">
+                    <img :src="getIconPath(footerIcons[i])" alt="icon">
+                </div>
+                <!-- <a href="#"><img src="../assets/img/footer-facebook.png" alt="icon"></a>
                 <a href="#"><img src="../assets/img/footer-twitter.png" alt="icon"></a>
                 <a href="#"><img src="../assets/img/footer-youtube.png" alt="icon"></a>
                 <a href="#"><img src="../assets/img/footer-pinterest.png" alt="icon"></a>
-                <a href="#"><img src="../assets/img/footer-periscope.png" alt="icon"></a>
+                <a href="#"><img src="../assets/img/footer-periscope.png" alt="icon"></a> -->
             </div>
         </div>
     </div>
