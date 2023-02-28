@@ -32,15 +32,15 @@
 <style lang="scss" scoped>
 
 .series {
-    min-height: 10rem;
-
     display: flex;
     flex-wrap: wrap;
+
+    margin: 0 -.5rem 0 -.5rem;
 
     .square {
         width: calc(100% / 6);
         height: 250px;
-        margin: 1.5rem 0;
+        margin: 2rem 0;
         padding: 0 .5rem 0 .5rem;
                 
         .card-container {
@@ -50,7 +50,7 @@
             img {
                 height: 80%;
                 width: 100%;
-                // object-fit: cover;
+                object-fit: cover;
                 margin-bottom: .8rem;
             }
         }

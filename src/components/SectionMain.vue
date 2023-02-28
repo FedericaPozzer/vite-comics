@@ -107,7 +107,8 @@ export default {
                     series: 'Catwoman',
                     type: 'graphic novel',
                 },
-            ]
+            ],
+
         }
     },
 
@@ -217,7 +218,7 @@ export default {
                 font-size: .9rem;
                 color: white;
                 cursor: pointer;
-                margin: 0 auto 2rem auto;
+                margin: 1rem auto 2rem auto;
             }
         }
 
