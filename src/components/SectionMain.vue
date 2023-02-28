@@ -1,5 +1,9 @@
 <script>
+import AppCards from "./products/AppCards.vue"
+
 export default {
+    components : {AppCards},
+
     data() {
         return {
             links : [
@@ -53,15 +57,7 @@ export default {
         <div class="container section-series">
             <h3>CURRENT SERIES</h3>
 
-            <div class="series">
-                <div class="square">
-                    <img src="../assets/img/footer-bg.jpg" alt="img">
-
-                    <div>ACTION COMICS</div>
-                
-                </div>
-
-            </div>
+            <AppCards></AppCards>
 
             <div class="btndiv">
                 <button>LOAD MORE</button>
@@ -135,28 +131,6 @@ export default {
 
             margin-top: -2rem;
         }
-
-        .series {
-            min-height: 10rem;
-
-            display: flex;
-            flex-wrap: wrap;
-
-            .square {
-                width: calc(100% / 6);
-                height: 250px;
-                margin: 1.5rem 0;
-                padding: 0 .5rem 0 .5rem;
-                
-                img {
-                    height: 80%;
-                    width: 100%;
-                    object-fit: cover;
-                    margin-bottom: .8rem;
-                }
-            }
-        }
-
     
         .btndiv {
             display: flex;
@@ -176,13 +150,6 @@ export default {
     }
    
 }
-
-.square {
-    height: 100px;
-    background-color: turquoise;
-    border: 1px solid black;
-}
-
 
 .section-links {
     background-color: #0282f9;
